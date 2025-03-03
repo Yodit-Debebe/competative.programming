@@ -3,9 +3,7 @@ class Solution:
         element_count = {}
         for num in nums:
             if num in element_count:
-                element_count[num]+=1
-            else:
-                element_count[num]=1
+              element_count[num] = element_count.get(num, 0) + 1
         ans=[]
         for element,count in element_count.items():
             if count > len(nums)//3:
